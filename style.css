@@ -84,21 +84,20 @@ img { max-width: 100%; height: auto; display: block; }
 .features-list li { display: flex; align-items: center; gap: 0.75rem; font-weight: 500; }
 .icon-circle { width: 2.5rem; height: 2.5rem; border-radius: 50%; background: rgba(139,0,0,0.1); display: flex; align-items: center; justify-content: center; color: var(--crimson); }
 
-/* Menu */
-
+/* Menu - Mobile par 2 columns aur Laptop par 3 columns */
 .menu-grid { 
     display: grid; 
-    grid-template-columns: 1fr; 
-    gap: 2rem; 
-    align-items: stretch; /* Saare cards ki height barabar karega */
+    grid-template-columns: repeat(2, 1fr); /* Mobile par ek line me 2 dishes */
+    gap: 0.75rem; /* Mobile par gap thoda compact rakha hai taaki aaram se fit ho */
+    align-items: stretch; 
 }
 
 .menu-card { 
     background: #fff; 
-    border-radius: 1rem; 
+    border-radius: 0.75rem; 
     overflow: hidden; 
     border: 1px solid var(--border); 
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04); 
     display: flex; 
     flex-direction: column; 
     height: 100%; 
@@ -106,7 +105,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .menu-card-img { 
     width: 100%;
-    height: 200px; /* Image box ki height fix kar di */
+    height: 120px; /* Mobile ke liye height thodi compact ki hai taaki balance rahe */
     position: relative; 
     background: linear-gradient(to bottom right, var(--crimson), var(--dark-red)); 
     display: flex; 
@@ -120,30 +119,51 @@ img { max-width: 100%; height: auto; display: block; }
 .menu-card-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Image stretch nahi hogi aur box me fit rahegi */
+    object-fit: cover; 
     display: block;
 }
 
 .menu-card-price { 
     position: absolute; 
-    top: 0.75rem; 
-    right: 0.75rem; 
+    top: 0.5rem; 
+    right: 0.5rem; 
     background: var(--crimson); 
     color: #fff; 
-    padding: 0.25rem 0.75rem; 
+    padding: 0.15rem 0.5rem; 
     border-radius: 9999px; 
     font-weight: 600; 
-    font-size: 0.875rem; 
+    font-size: 0.75rem; 
     z-index: 2;
 }
 
 .menu-card-body { 
-    padding: 1.5rem; 
+    padding: 0.85rem; 
     display: flex; 
     flex-direction: column; 
     justify-content: space-between; 
-    flex-grow: 1; /* Text aur button ko properly align karega */
+    flex-grow: 1; 
 }
+
+.menu-card-body h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.2;
+}
+
+.menu-card-body p {
+    font-size: 0.75rem;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.menu-card-body a {
+    font-size: 0.75rem;
+}
+
 /* Gallery */
 .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
 .gallery-item { border-radius: 0.75rem; overflow: hidden; height: 18rem; }
@@ -169,6 +189,10 @@ img { max-width: 100%; height: auto; display: block; }
 .footer { background: #111827; color: #fff; padding: 3rem 0; margin-top: 5rem; }
 .footer-logo { font-family: 'Yatra One', serif; font-size: 1.5rem; color: var(--gold); display: block; margin-bottom: 0.5rem; }
 
+/* Scrollbar Hide for Menu Buttons */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
 /* Responsive Desktop Styles */
 @media (min-width: 768px) {
     .desktop-nav { display: flex; }
@@ -177,7 +201,16 @@ img { max-width: 100%; height: auto; display: block; }
     .hero-content { text-align: left; }
     .hero-btns { flex-direction: row; justify-content: flex-start; }
     .grid-2 { grid-template-columns: 1fr 1fr; }
-    .menu-grid { grid-template-columns: repeat(3, 1fr); }
+    
+    /* Laptop par 3 columns aur badiya card size */
+    .menu-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .menu-card-img { height: 200px; }
+    .menu-card-body { padding: 1.5rem; }
+    .menu-card-body h3 { font-size: 1.25rem; }
+    .menu-card-body p { font-size: 0.875rem; display: block; }
+    .menu-card-body a { font-size: 0.875rem; }
+    .menu-card-price { top: 0.75rem; right: 0.75rem; padding: 0.25rem 0.75rem; font-size: 0.875rem; }
+
     .gallery-grid { grid-template-columns: repeat(3, 1fr); }
     .form-grid { grid-template-columns: 1fr 1fr; }
     .full-width { grid-column: span 2; }
