@@ -766,22 +766,26 @@ img {
     }
 }
 
-/* Popular Dishes Title aur Buttons Alignment Fix */
-.section-title {
+/* Menu section title aur categories alignment fix */
+#menu .section-title {
     text-align: center !important;
-    margin-bottom: 1.75rem !important;
-    padding: 0 1rem !important;
-}
-
-.section-title h2 {
-    margin-bottom: 0.5rem !important;
-}
-
-.section-title p {
-    margin-bottom: 0 !important;
-}
-
-.menu-categories {
-    margin-top: 1rem !important;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1.5rem !important;
+}
+
+#menu .section-title h2 {
+    text-align: center !important;
+}
+
+#menu .section-title p {
+    text-align: center !important;
+}
+
+#menu .menu-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
 }
