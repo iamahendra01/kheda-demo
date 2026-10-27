@@ -1,24 +1,4 @@
-/* Fonts Setup */
-@font-face {
-    font-family: "Yatra One";
-    src: url(fonts/yatra-one-latin-400-normal.woff2) format("woff2");
-    font-weight: 400;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: "Hind";
-    src: url(fonts/hind-latin-400-normal.woff2) format("woff2");
-    font-weight: 400;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Hind";
-    src: url(fonts/hind-latin-600-normal.woff2) format("woff2");
-    font-weight: 600;
-    font-display: swap;
-}
 
 :root {
     --bg-warm: #FFFDF9;
