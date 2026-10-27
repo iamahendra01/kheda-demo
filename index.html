@@ -155,13 +155,13 @@
                     <h2>Popular Dishes</h2>
                     <p>Pick a category to filter. Prices are per plate.</p>
                 </div>
-                <div class="menu-categories" role="group" aria-label="Menu categories">
-                    <button class="menu-btn active" data-category="all" aria-pressed="true">All Items</button>
-                    <button class="menu-btn" data-category="rajasthani" aria-pressed="false">Rajasthani</button>
-                    <button class="menu-btn" data-category="starters" aria-pressed="false">Starters</button>
-                    <button class="menu-btn" data-category="main" aria-pressed="false">Main Course</button>
-                    <button class="menu-btn" data-category="beverages" aria-pressed="false">Beverages</button>
-                </div>
+               <div class="menu-categories flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-3 mb-10 px-4 scrollbar-hide" role="group" aria-label="Menu categories">
+    <button class="menu-btn active whitespace-nowrap px-5 py-2 rounded-full font-medium transition bg-crimsonRed text-white shadow-md text-sm" data-category="all" aria-pressed="true">All Items</button>
+    <button class="menu-btn whitespace-nowrap px-5 py-2 rounded-full font-medium transition bg-white text-gray-700 hover:bg-gray-200 border border-gray-200 text-sm" data-category="rajasthani" aria-pressed="false">Rajasthani</button>
+    <button class="menu-btn whitespace-nowrap px-5 py-2 rounded-full font-medium transition bg-white text-gray-700 hover:bg-gray-200 border border-gray-200 text-sm" data-category="starters" aria-pressed="false">Starters</button>
+    <button class="menu-btn whitespace-nowrap px-5 py-2 rounded-full font-medium transition bg-white text-gray-700 hover:bg-gray-200 border border-gray-200 text-sm" data-category="main" aria-pressed="false">Main Course</button>
+    <button class="menu-btn whitespace-nowrap px-5 py-2 rounded-full font-medium transition bg-white text-gray-700 hover:bg-gray-200 border border-gray-200 text-sm" data-category="beverages" aria-pressed="false">Beverages</button>
+               </div>
                 <div id="menu-grid" class="menu-grid" aria-live="polite"></div>
             </div>
         </section>
